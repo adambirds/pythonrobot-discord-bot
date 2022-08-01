@@ -1,0 +1,3 @@
+pip==22.1.2
+setuptools
+wheel
