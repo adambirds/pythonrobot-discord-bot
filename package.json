@@ -1,0 +1,23 @@
+{
+  "name": "pythonrobot-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^2.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adambirds/pythonrobot-discord-bot.git"
+  },
+  "author": "Adam Birds",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/adambirds/pythonrobot-discord-bot/issues"
+  },
+  "homepage": "https://github.com/adambirds/pythonrobot-discord-bot#readme"
+}
