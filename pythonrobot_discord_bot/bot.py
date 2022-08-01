@@ -38,7 +38,7 @@ class PythonRobot(commands.AutoShardedBot):
                 except commands.errors.ExtensionFailed as exc:
                     self.logger.warning("Skipped %s.%s: %s", folder, extension, exc.__cause__)
 
-    async def on_ready(self):
+    async def on_ready(self) -> None:
         self.logger.info("Booted up")
         await self.change_presence(
             activity=discord.Activity(type=discord.ActivityType.watching, name="!help")
