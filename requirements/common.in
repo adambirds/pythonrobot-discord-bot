@@ -4,7 +4,7 @@
 # See requirements/README.md for more detail.
 
 # Discord
-discord.py==1.7.3
+https://github.com/Rapptz/discord.py/archive/07ad6951fbb2151eb6b166484cf5bed5ee00f5b7.zip#egg=discord.py==2.0.0
 
 # Dotenv
 python-dotenv==0.20.0

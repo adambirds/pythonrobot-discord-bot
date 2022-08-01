@@ -106,9 +106,8 @@ codespell==2.1.0 \
     --hash=sha256:19d3fe5644fef3425777e66f225a8c82d39059dcfe9edb3349a8a2cf48383ee5 \
     --hash=sha256:b864c7d917316316ac24272ee992d7937c3519be4569209c5b60035ac5d569b5
     # via -r requirements/dev.in
-discord-py==1.7.3 \
-    --hash=sha256:462cd0fe307aef8b29cbfa8dd613e548ae4b2cb581d46da9ac0d46fb6ea19408 \
-    --hash=sha256:c6f64db136de0e18e090f6752ea68bdd4ab0a61b82dfe7acecefa22d6477bb0c
+discord.py @ https://github.com/Rapptz/discord.py/archive/07ad6951fbb2151eb6b166484cf5bed5ee00f5b7.zip \
+    --hash=sha256:3970f29ebb7354f1d7dda7571788e26f5661ed563c6fa581bc8442cc7fe5df23
     # via -r requirements/common.in
 gitlint-core==0.17.0 \
     --hash=sha256:772dfd33effaa8515ca73e901466aa938c19ced894bec6783d19691f57429691 \
