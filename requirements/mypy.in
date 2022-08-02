@@ -3,3 +3,5 @@
 # and requirements/mypy.txt.
 # See requirements/README.md for more detail.
 mypy>=0.971
+
+types-pytz==2022.1.2
