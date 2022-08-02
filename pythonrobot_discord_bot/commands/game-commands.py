@@ -11,6 +11,13 @@ class GameCommandsCog(commands.Cog):
     def __init__(self, bot: PythonRobot) -> None:
         self.bot = bot
 
+    @app_commands.command(description="Roll a dice.")
+    async def dice(self, interaction: discord.Interaction) -> None:
+        """
+        /dice command.
+        """
+        await interaction.response.send_message(content=f"You rolled a {random.randint(1,6)}.")
+
     @app_commands.command(name="8ball", description="The bot will reply to a yes or no question.")
     async def eight_ball(self, interaction: discord.Interaction, *, question: str) -> None:
         """
