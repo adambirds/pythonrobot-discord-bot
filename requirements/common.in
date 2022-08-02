@@ -8,3 +8,6 @@ https://github.com/Rapptz/discord.py/archive/07ad6951fbb2151eb6b166484cf5bed5ee0
 
 # Dotenv
 python-dotenv==0.20.0
+
+# pytz
+pytz==2022.1
