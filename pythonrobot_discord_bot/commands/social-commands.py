@@ -10,16 +10,14 @@ class SocialCommandsCog(commands.Cog):
     @app_commands.command(description="Lists social links.")
     async def socials(self, interaction: discord.Interaction) -> None:
         embed = discord.Embed(title="Socials", description="", color=discord.Colour.red())
-        embed.add_field(name="GitHub", value="https://github.com/adambirds", inline=False)
+        embed.add_field(name="GitHub", value="https://github.com/adambirds")
+        embed.add_field(name="Twitch", value="https://twitch.tv/codingandgamingwithadam")
+        embed.add_field(name="\u200b", value="\u200b")
         embed.add_field(
-            name="Twitch", value="https://twitch.tv/codingandgamingwithadam", inline=False
+            name="YouTube", value="https://www.youtube.com/channel/UCOJ37qE6yr-7fspsgzpTGkQ"
         )
-        embed.add_field(
-            name="YouTube",
-            value="https://www.youtube.com/channel/UCOJ37qE6yr-7fspsgzpTGkQ",
-            inline=False,
-        )
-        embed.add_field(name="Instagram", value="https://instagram.com/adambirds", inline=False)
+        embed.add_field(name="Instagram", value="https://instagram.com/adambirds")
+        embed.add_field(name="\u200b", value="\u200b")
         await interaction.response.send_message(embed=embed)
 
 
