@@ -1,22 +1,16 @@
 import discord
 from discord.ext import commands
 
+from pythonrobot_discord_bot.bot import PythonRobot
+
 
 class EventsCog(commands.Cog):
-    def __init__(self, bot: commands.Bot) -> None:
+    def __init__(self, bot: PythonRobot) -> None:
         self.bot = bot
 
     @commands.Cog.listener()
-    async def on_message(self, message: discord.Message) -> None:
-        """
-        on_message event.
-        """
-        if message.author.bot:
-            return
-
-        print(f"{message.author}: {message.content}")
-
-        await self.bot.process_commands(message)
+    async def on_guild_join(self, guild: discord.Guild) -> None:
+        self.bot.logger.info(f"Joined {guild.name}")
 
 
 async def setup(bot: commands.Bot) -> None:
