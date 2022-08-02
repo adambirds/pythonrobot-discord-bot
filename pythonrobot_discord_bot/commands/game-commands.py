@@ -1,4 +1,5 @@
 import random
+from typing import Literal
 
 import discord
 from discord import app_commands
@@ -44,6 +45,47 @@ class GameCommandsCog(commands.Cog):
         await interaction.response.send_message(
             content=f"{json_data['author']}: \"{json_data['content']}\""
         )
+
+    @app_commands.command(description="Calculate simple maths.")
+    async def calculator(
+        self,
+        interaction: discord.Interaction,
+        value1: str,
+        operator: Literal["+", "-", "*", "/"],
+        value2: str,
+    ) -> None:
+        """
+        /calculator command
+        """
+        try:
+            value1_int = float(value1)
+            value2_int = float(value2)
+        except:
+            return await interaction.response.send_message(
+                content=f"<@{interaction.user.id}> you submitted an invalid number for your calculation."
+            )
+
+        match operator:
+            case "+":
+                answer = value1_int + value2_int
+            case "-":
+                answer = value1_int - value2_int
+            case "*":
+                answer = value1_int * value2_int
+            case "/":
+                try:
+                    answer = value1_int / value2_int
+                except:
+                    return await interaction.response.send_message(
+                        f"<@{interaction.user.id}> you can't divide by 0."
+                    )
+
+            case _:
+                return await interaction.response.send_message(
+                    f"<@{interaction.user.id}> you submitted an invalid operator."
+                )
+
+        await interaction.response.send_message(f"<@{interaction.user.id}> the answer is {answer}.")
 
 
 async def setup(bot: commands.Bot) -> None:
