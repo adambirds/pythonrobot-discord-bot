@@ -18,6 +18,12 @@ class SocialCommandsCog(commands.Cog):
         )
         embed.add_field(name="Instagram", value="https://instagram.com/adambirds")
         embed.add_field(name="\u200b", value="\u200b")
+        embed.add_field(name="Facebook", value="https://facebook.com/adbwebdesigns")
+        embed.add_field(name="Twitter", value="https://twitter.com/adbwebdesigns")
+        embed.add_field(name="\u200b", value="\u200b")
+        embed.add_field(name="TikTok", value="https://tiktok.com/username")
+        embed.add_field(name="Reddit", value="https://reddit.com/username")
+        embed.add_field(name="\u200b", value="\u200b")
         await interaction.response.send_message(embed=embed)
 
 
