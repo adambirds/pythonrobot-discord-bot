@@ -34,6 +34,17 @@ class GameCommandsCog(commands.Cog):
         else:
             return
 
+    @app_commands.command(description="The bot will reply with na random quote.")
+    async def quote(self, interaction: discord.Interaction) -> None:
+        """
+        /quote command
+        """
+        async with self.bot.session.get(self.bot.QUOTES_API) as r:
+            json_data = await r.json(content_type="application/json")
+        await interaction.response.send_message(
+            content=f"{json_data['author']}: \"{json_data['content']}\""
+        )
+
 
 async def setup(bot: commands.Bot) -> None:
     await bot.add_cog(GameCommandsCog(bot))

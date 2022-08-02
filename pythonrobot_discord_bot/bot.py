@@ -14,6 +14,8 @@ intents.message_content = True
 class PythonRobot(commands.AutoShardedBot):
     session: ClientSession
 
+    QUOTES_API = "https://api.quotable.io/random"
+
     def __init__(self) -> None:
         intents = discord.Intents.default()
         intents.members = True
